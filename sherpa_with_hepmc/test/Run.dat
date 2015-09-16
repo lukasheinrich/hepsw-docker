@@ -1,0 +1,35 @@
+(run){
+  % general setting
+  EVENTS 1K; ERROR 0.99;
+  MASSIVE_PS 4 5;
+
+  EVENT_OUTPUT HepMC_GenEvent[sherpa_events],
+
+  % scales, tags for scale variations
+  FSF:=1.; RSF:=1.; QSF:=1.;
+  SCALES METS{FSF*MU_F2}{RSF*MU_R2}{QSF*MU_Q2};
+
+  % tags for process setup
+  NJET:=0; LJET:=2,3,4; QCUT:=20.;
+
+  % me generator settings
+  ME_SIGNAL_GENERATOR Comix Amegic;
+  EVENT_GENERATION_MODE Weighted;
+
+  % exclude tau from lepton container
+  MASSIVE[15] 1;
+
+  % collider setup
+  BEAM_1 2212; BEAM_ENERGY_1 = 4000.;
+  BEAM_2 2212; BEAM_ENERGY_2 = 4000.;
+}(run)
+
+(processes){
+  Process 93 93 -> 90 90 93{NJET};
+  End process;
+}(processes)
+
+(selector){
+  Mass 11 -11 66 E_CMS
+  Mass 13 -13 66 E_CMS
+}(selector)
