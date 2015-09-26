@@ -1,0 +1,38 @@
+FROM lukasheinrich/gcc_with_fortran:4.3.9
+RUN mkdir /code
+WORKDIR /code
+
+ADD install_scripts/python27.sh python27.sh
+RUN ./python27.sh
+
+RUN echo 'include /usr/local/lib' >> /etc/ld.so.conf.d/local.conf && ldconfig
+
+RUN wget https://bootstrap.pypa.io/get-pip.py
+RUN python get-pip.py
+
+RUN apt-get update 
+RUN apt-get install -y scons
+RUN apt-get install -y swig
+RUN apt-get install -y texlive-full
+
+RUN pip install numpy
+RUN pip install matplotlib
+
+ADD install_scripts/hepmc.sh hepmc.sh
+RUN ./hepmc.sh 2.06.09
+
+
+RUN wget http://rivet.hepforge.org/hg/bootstrap/raw-file/2.3.0/rivet-bootstrap && chmod +x rivet-bootstrap
+RUN YODA_VERSION=1.5.3 INSTALL_PREFIX=/usr/local ./rivet-bootstrap
+
+RUN wget http://www.hepforge.org/archive/sherpa/SHERPA-MC-2.2.0.tar.gz
+RUN tar -xzvf SHERPA-MC-2.2.0.tar.gz
+WORKDIR SHERPA-MC-2.2.0
+
+RUN ./configure --prefix="/usr/local"  --enable-hepmc2=/usr/local --enable-rivet=/usr/local --enable-pyext
+RUN make -j4
+RUN make install
+
+WORKDIR /code
+
+WORKDIR /
