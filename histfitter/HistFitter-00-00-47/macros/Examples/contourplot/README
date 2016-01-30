@@ -1,0 +1,41 @@
+## To make contour plots, do the following:
+
+## 1. make root files containing the workspaces for grid point you want to assess.
+## --> Follow readme file in scripts/README
+##     then move the root files here.
+
+## For example
+HistFitter.py -w analysis/tutorial/MySimpleChannelConfig.py
+
+## 2. Determing the exclusion CLs-value for all workspaces in each root file
+##    (one workspace corresponds to one grid point)
+##    The setting for the hypothesis test can be found in : python/MySimpleChannelConfig.py
+##    In particular there 's the setting : configMgr.calculatorType=2
+##    where 0 = toys, and 2 = asymptotic limits
+
+HistFitter.py -p analysis/tutorial/MySimpleChannelConfig.py
+
+##    This produces a root file with hypothesis test results, at:
+##    results/MySimpleChannelAnalysisOutput_hypotest.root
+
+## 3. Convert the root file with hypo test results into a readable 'list' file.
+
+cd macros/Examples/contourplots
+root -b -q makelistfiles.C
+
+##    this example produces two list text files with p-values, that can be read in in root
+##    by doing : root -l summary_harvest_tree_description.h
+##    which gives you a tree with the results
+
+## 4. make contour histograms based on these list files
+
+root -b -q makecontourhists.C 
+
+## --> The underlying script used here is to make the histograms is : contourmacros/m0_vs_m12_nofloat.C
+
+## 5. make final plots based on histograms
+
+root -b -q makecontourplots.C
+
+## --> The underlying script to make the plots is : contourmacros/SUSY_m0_vs_m12_all_withBand_cls.C
+## the plots are stored under plots/

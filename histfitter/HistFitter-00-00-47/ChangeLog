@@ -1,0 +1,1055 @@
+2015-04-13 Jeanette Miriam Lorenz <jeanette.miriam.lorenz@cern.ch>
+        * update README to latest svn path
+        * fix a bug (potential division by 0) in python/prepareHistos.py
+
+2015-03-27 Jeanette Miriam Lorenz <jeanette.miriam.lorenz@cern.ch>
+        * update of multiple tutorial macros to not using ATLAS data
+        * tagging HistFitter-00-00-46 for tutorial at DESY
+
+2015-03-14 Jeanette Miriam Lorenz <jeanette.miriam.lorenz@cern.ch>
+        M       analysis/tutorial/MyShapeFitExample.py
+        M       analysis/tutorial/MySimpleChannelConfig.py
+        M       scripts/HistFitter.py
+        M       src/Utils.cxx
+        M       src/Utils.h
+        * allow for fixing certain parameters in a fit by using the command line option -C parameter1:value1,parameter2:value2,...
+        * various small additions to tutorial examples
+
+2015-03-11 Jeanette Miriam Lorenz <jeanette.miriam.lorenz@cern.ch>
+        M       src/ConfigMgr.cxx
+        M       analysis/tutorial/MySimpleChannelConfig.py
+        M       docs/tutorial_upperlimits.txt
+        * completed upper limit tutorial
+        * tagging HistFitter-00-00-45
+
+2015-03-06 Jeanette Miriam Lorenz <jeanette.miriam.lorenz@cern.ch>
+        A       scripts/HypoTest.py
+        M       src/ConfigMgr.cxx
+        M       src/ConfigMgr.h
+        * added dynamic rescan for upper limit calculation
+
+2015-02-18 Jeanette Miriam Lorenz <jeanette.miriam.lorenz@cern.ch>
+        M       python/configManager.py
+        M       src/ConfigMgr.cxx
+        M       src/ConfigMgr.h
+	* allow the user to specify the scan ranges for the second scan in -l - addition sugested by Daniela Boerner
+
+2015-01-21 Jeanette Miriam Lorenz <jeanette.miriam.lorenz@cern.ch>
+        * multiple smaller modifications for the tutorial, mostly commenting any usage of the ATLAS plotting style, but also adding the file MyUpperLimitAnalysis_SS.py back
+        * updating setup_afs.sh to Root 5.34.23
+        * tagging HistFitter-00-00-44
+
+2014-10-24 Jeanette Miriam Lorenz <jeanette.miriam.lorenz@cern.ch>
+        * fixing buildHisto in python/sample.py: default lower edge of histograms now 0.5 as required for the 'cuts' case (previously buggy)
+        * added the functionality to define a width of the bins - formerly alsways 1., now variable. Default is 1. to ensure backward compatibility.
+
+2014-10-02 Jeanette Miriam Lorenz <jeanette.miriam.lorenz@cern.ch>
+        * moving macros/contourplot and analysis/batchjobs directories to HistFitter User
+        * add licences to files in macro directory
+        * remove ATLAS specific stuff in macro directory
+        D macros/AtlasStyle.C and macros/AtlasStyle.h
+
+2014-09-19 Jeanette Miriam Lorenz <jeanette.miriam.lorenz@cern.ch>
+        * starting to comment macro directory - to be continued
+
+2014-09-08 Alex Koutsman <alex.koutsman@cern.ch>
+	* setup.sh: several updates to make the setup script non CERN specific (working after setting up localRootSetup)
+	* Might possibly need to be changed again for the public code release
+	* Tagging HistFitter-00-00-42 (for HF tutorial at TRIUMF)
+
+2014-09-02 Alex Koutsman <alex.koutsman@cern.ch>
+	* Several updates to make the tutorial work with HF trunk
+	* Also the HF tutorial twiki is updated (in time for HF tutorial at TRIUMF, 10-12 Sept 2014)
+	* Tagging HistFitter-00-00-41
+
+2014-08-19 Jeanette Miriam Lorenz <jeanette.miriam.lorenz@cern.ch>
+        M scripts/UpperLimitTable.py
+        * resetting of signal strength parameter not done correctly for calculation of discovery p-value. 
+        * Fixed by explicit reopening of the workspace before the calculation of discovery p-value.
+
+2014-07-23 Jeanette Miriam Lorenz <jeanette.miriam.lorenz@cern.ch>
+        * Tagging HistFitter-00-00-40
+
+2014-07-15 Max Baak <mbaak@cern.ch>
+	M       src/Utils.cxx
+	M       src/ValidationUtils.cxx
+	* Fix two small compiler warnings
+
+2014-07-14 Jeanette Miriam Lorenz <jeanette.miriam.lorenz@cern.ch>
+        * setup.sh: update to Root 5.34.19 and load more recent xrootd libraries
+
+2014-07-08 Jeanette Miriam Lorenz <jeanette.miriam.lorenz@cern.ch>
+        * small fix to setup.sh (update build version to gcc 4.7)
+
+2014-06-25 Alex Koutsman <koutsman@cern.ch>
+	* python/cmdLineUtils.py
+	* src/Utils.cxx
+	* src/Utils.h
+	* scripts/YieldsTable.py
+	* Adding option to run YieldsTable.py script with bin-by-bin calculation option -P
+
+2014-06-13 Jeanette Miriam Lorenz <jeanette.miriam.lorenz@cern.ch>
+        * setup.sh: pointing now to Root 5.34.18 patch version located in usual afs area
+
+2014-06-05 Jeanette Miriam Lorenz <jeanette.miriam.lorenz@cern.ch>
+        * setup.sh: pointing now to gcc 4.7 and Root 5.34.18 patch due to requirements by the CombinationTool package
+	* analysis/batchjobs/HypoTest.py: add a rescan for -l in case that the initial scan range was not sufficient. Store the result as debug_<point>.root in case of failures in -l
+
+2014-06-02 Geert-Jan Besjes <geert-jan.besjes@cern.ch>
+	* src/StatTools.cxx: switch on PROOF-lite when nCPUs>1
+	* src/Utils.cxx: indenting fix
+	
+	* src/LimitResult.cxx: write out with %e and not %f
+	* src/StatTools.cxx: remove the hack needed with %f 
+
+2014-05-14 Alex Koutsman <koutsman@cern.ch>
+        * src/Utils.cxx
+	* fixing bug in ratio plot error 
+
+2014-04-23 Alex Koutsman <koutsman@cern.ch>
+	* scripts/SysTable.py
+	* Added method-2 back to SysTable.py
+
+2014-03-26 David Cote <david.cote@cern.ch>
+	* Added ERROR message when high==low in sample.addOveralSys().
+	  Otherwise, HistFactory seems to do something like error=(high-low)/(high+low),
+	  which silently cancels the error.
+
+2014-03-21 David Cote <david.cote@cern.ch>
+	* Made plotRatio of type string (instead of bool) and configurable via configMgr, with options: "ratio", "pull, "none"
+	* Implemented plotRatio=="none" case in Utils.cxx
+
+2014-03-07 Jeanette Miriam Lorenz <jeanette.miriam.lorenz@cern.ch>
+       * analysis/batchjobs/HypoTest.py: update for -l to reflect changes in src/ConfigMgr.cxx for upper limits (-l)
+
+2014-03-04 Geert-Jan Besjes <geert-jan.besjes@cern.ch>
+	* src/StatTools.cxx: don't exit(1) in get_Pvalue when sampling
+	distribution is empty, but return a dummy result 
+	
+2014-02-25 Geert-Jan Besjes <geert-jan.besjes@cern.ch>
+	* src/toy_utils.cxx: replace hypo_discovery with fitTo properly
+
+2014-02-24 Geert-Jan Besjes <geert-jan.besjes@cern.ch>
+	* src/ConfigMgr.cxx: change name of -z hypotests to hypo_discovery_*
+	rather than hypo_* to 
+	* scripts/HistFitter.py: allow use of -p -z simultaneously
+
+2014-02-18 Geert-Jan Besjes <geert-jan.besjes@cern.ch>
+	* Tagging HistFitter-00-00-38
+
+2014-02-05 Max Baak
+	M       prepareHistos.py
+	* patch for qcd histograms generation to use tree prepare fallback.
+
+2014-01-29 Geert-Jan Besjes <geert-jan.besjes@cern.ch>
+	* Allow HistoPrepare to fall back to TreePrepare for missing histograms in
+	  either of the cache files
+
+2014-01-29 Geert-Jan Besjes <geert-jan.besjes@cern.ch>
+	* ConfigManager.cxx: protect null ptr
+	* StatTools.cxx: MakeUpperLimitPlot() uses ExclusionCleanup() too
+
+2014-01-28 Max Baak <mbaak@cern.ch>
+	* The fix for userNormHistoSys is in, hence tagging HistFitter-00-00-37
+
+2014-01-28 Alex Koutsman <koutsman@cern.ch>
+	U python/configManager.py
+	* turning off the added possibility to remap histoSys systematics (added on 2014-01-13), as functionality to remap the shape-part of the histoSys systematic is not present. So remapping would only change the normalization and result in wrong systematic estimation.
+
+2014-01-27 Jeanette Miriam Lorenz <jeanette.miriam.lorenz@cern.ch>
+        M python/ConfigManager.py
+	* bug fix in userNormHistoSys: making sure that the normString identifying regions used for the normalization gets sets correctly depending on the current channel; this ensures that the correct regions are used for the normalization
+
+2014-01-24 Jeanette Miriam Lorenz <jeanette.miriam.lorenz@cern.ch>
+        M python/ConfigManager.py
+	M scripts/HistFitter.py
+	* remove loose signal regions used for remapping of systematic uncertainties in the exclusion fit (only if remapping was activated)
+
+2014-01-14 Max Baak <mbaak@cern.ch>
+	M       src/Utils.cxx
+	M       src/Utils.h
+	* scanf function (usable in python)
+
+2014-01-13 Alex Koutsman <koutsman@cern.ch>
+	   U python/configManager.py
+	   U python/channel.py
+	   U python/fitConfig.py
+	   U python/sample.py
+	   * Adding possibility to remap histoSys systematics. 
+	   * In channel.py it is tested whether nBins and bin width is the same for the two channels in question
+	
+2013-12-16 Max Baak <mbaak@cern.ch>
+	M       StatTools.cxx
+	M       ConfigMgr.cxx
+	M       LimitResult.cxx
+	M       HypoTestTool.cxx
+	M       StatTools.h
+	M       LimitResult.h
+	* Now also store expected +- Nsigma variation of discovery p-value
+	* When running HistFitter.py -z myconfigfile.py
+
+2013-12-13  Zach Marshall <zach.marshall@cern.ch>
+	* python/prepareHisto.py: Removing very slow alias setting
+	* scripts/HistFitter.py: Adding option to run code profiler
+
+2013-12-12 Geert-Jan Besjes <geert-jan.besjes@cern.ch>
+	* src/ConfigMgr.cxx: first ExclusionCleanup() call could segfault, moved
+
+2013-12-12 Alex Koutsman <koutsman@cern.ch>
+	U    scripts/HistFitter.py
+	* small fix for new --fitname option
+
+2013-12-11 Geert-Jan Besjes <geert-jan.besjes@cern.ch>
+	* scripts/HistFitter.py: fix a bug where if in the user file the variable
+	'args' was used to parse configMgr.userArg *and* the user would want to
+	run a fit this would lead to an error: 
+		AttributeError: 'Namespace' object has no attribute 'fitname'
+	Unless in the case where userArgs were supposed to have this attribute.
+	Fixed by renaming our args to HistFitterArgs. This is a reserved keyword
+	now, in a sense.
+
+2013-12-09 Max Baak <mbaak@cern.ch>
+	M       scripts/YieldsTableTex.py
+	* Add sentence in caption that errors are symmetric by construction.
+
+2013-12-05 Geert-Jan Besjes <geert-jan.besjes@cern.ch>
+	* Tagging HistFitter-00-00-36-01
+
+2013-11-26 Geert-Jan Besjes <geert-jan.besjes@cern.ch>:
+	* src/toy_utils.cxx, src/toy_utils.h: modify
+	CollectAndWriteHypoTestResults to allow rejectFailed=false 
+
+2013-11-24 Geert-Jan Besjes <geert-jan.besjes@cern.ch>
+	* scripts/YieldsTable.py: allow -B to run blinded, nObs(SR) will be
+	replaced with -1. Also, run ROOT in batch mode.
+
+2013-11-22 Geert-Jan Besjes <geert-jan.besjes@cern.ch>
+	* scripts/HistFitter.py: add --fitname option to allow user to specify
+	name when running fits with -f. This is relevant for analyses where the
+	exclusion yield table is needed: by default we plot fitConfigs[0] which is
+	usually the background fit in cases where exclusion fits are constructed
+	by copying the background and adding signal. 
+
+2013-11-22 Geert-Jan Besjes <geert-jan.besjes@cern.ch>
+	* src/toy_utils.cxx: accidentally rejected all fits, now fixed to proper
+	behaviour: just reject bad ones
+	* HistFitter-00-00-36
+
+2013-11-21 Geert-Jan Besjes <geert-jan.besjes@cern.ch>
+	* macros/Examples/pulls/examplePullPlot.py: fix broken path
+	* HistFitter-00-00-35-01
+
+2013-11-21 Max Baak <mbaak@cern.ch>
+	M       src/toy_utils.h
+	M       src/toy_utils.cxx
+	* by default, when merging hypo tests, reject grid points with failed
+	pre-fits.
+	* Tagging HistFitter-00-00-34
+	* Moved examples/ to macros/Examples/
+	* Tagging HistFitter-00-00-35
+
+
+2013-11-21 Geert-Jan Besjes <geert-jan.besjes@cern.ch>
+	* examples/: added an example pull plot script, with demo output
+
+2013-11-21 Max Baak <mbaak@cern.ch>
+	* src/ConfigMgr.cxx: ExclusionCleanup() now reports the number of
+	rejected hypo tests in per scan.
+
+2013-11-20 Geert-Jan Besjes <geert-jan.besjes@cern.ch>
+	* python/pullPlotUtils.py: utility module for pull plots
+
+2013-11-20 Geert-Jan Besjes <geert-jan.besjes@cern.ch>
+	* scripts/YieldsTable.py: allow -C and -L options to set caption and label
+ 	  by hand for outputted table
+	* scripts/YieldsTableTex.py: propagated changes from YieldsTable.py
+
+2013-11-15 Geert-Jan Besjes <geert-jan.besjes@cern.ch>
+	* src/ConfigMgr.cxx: use ExclusionCleanup() for the hypothesis tests
+
+2013-11-15 Max Baak <mbaak@cern.ch>
+	U setup.sh
+	* Point to patched root version
+	* In the ATLAS SUSY group we find occasionally when doing an
+	* upper limit scan that hypothesis tests of one or several of the scan points fail (for example when mu
+	* is too high, and the fit gets too distorted), but don't get rejected or flagged as such, which
+	* shows up as spikes in the upper limit scan.
+	* I've added a function 
+	HypoTestInverterResult::ExclusionCleanup() 
+	* which excludes such points and redoes the inversion.
+
+
+2013-10-28 Alex Koutsman <koutsman@cern.ch>
+	U    scripts/YieldsTable.py
+	U    scripts/YieldsTableTex.py
+	U    scripts/SysTable.py
+	* update YieldsTableTex.py to deal with sample with "_" in the name
+	* change modus for YieldsTable.py and SysTable.py to +x
+
+2013-10-30 Max Baak <mbaak@cenn.ch>
+	M       src/Utils.cxx
+	* Fix compilation warnings
+	M       src/ConfigMgr.cxx
+	* reset initial values before doing upperlimit
+	M 	setup.sh
+	* root v5.34.10
+
+2013-10-28 Alex Koutsman <koutsman@cern.ch>
+	U    scripts/YieldsTable.py
+	U    scripts/YieldsTableTex.py
+	* Fixed a bug in YieldsTable.py, when you run with -S option: show the 
+	* sum of all regions. This option is off though by default, and we
+	* believe noone has been affected. (The summed numbers are so clearly
+	* off that we should've heard something if someone was.)
+	* Tagging HistFitter-00-00-33
+
+2013-10-28 Max Baak <mbaak@cern.ch>
+	M       src/HypoTestTool.cxx
+	* Initial fit of hypotest done with Minuit2
+	M 	src/Utils.cxx
+	* Fix to function that resets nominal global measurements for mc stat errors.
+	M       setup.sh
+	* Migration to slc 6
+	A       setup5.sh
+	* Setup file for slc5
+	* Tagging HistFitter-00-00-32
+
+2013-10-10 David Cote <david.cote@cern.ch>
+	-major clean-up of SysTable.py
+	  * removed un-used method 2 with its arguments
+	  * moved namemap from core to an optional end-user config file
+	    with an exmaple in python/MySystTableConfig.py
+	    --> usable as: SysTable.py <options> MySystTableConfig.py
+	-added new the possibility to merge samples, with syntax:
+	    --> SysTable.py -s '[topZ,topW,ttbarHiggs,singleTopZ],[diBosonWZ,diBosonPowhegZZ,triBoson],fakes'
+	    --> YieldsTable.py -s '[topZ,topW,ttbarHiggs,singleTopZ],[diBosonWZ,diBosonPowhegZZ,triBoson],fakes'
+	-added the possibility to merge systematics after fit, using namemap object, with syntax:
+	    --> SysTable.py <options> MySystTableConfig.py
+	-added -t argument to YieldsTable.py to set the latex table name
+	-added -u argument to YieldsTable.py to pass arbitrary string to latex table caption
+	* Tagging HistFitter-00-00-31
+
+2013-10-08 Max Baakk <mbaak@cern.ch>
+	M       scripts/UpperLimitTable.py
+	* Reset initial parameter values before p0 calculation
+	M       Utils.cxx
+	M       Utils.h
+	* Function to reset nominal global measurements
+
+2013-08-29 Lucian Ancu <lucian@cern.ch>
+	M python/configManager.py
+	* added infrastructure for adding systematics both from a list [S1,S2,S3] or a list of lists  [[S11,S12],[S21,S22,S23],...]. Summed systematic takes the first name in the list, i.e. S1, S11 or S21. 
+	
+2013-08-23 Jeanette Miriam Lorenz <jeanette.miriam.lorenz@cern.ch>
+        M macros/contourplot/contourmacros/SUSY_m0_vs_m12_all_withBand_cls.C
+	A macros/contourplot/contourmacros/limit_plot_SM.py
+	* minor changes in SUSY_m0_vs_m12_all_withBand_cls.C
+	* added new contour plot plotting macro in python: limit_plot_SM.py
+
+2013-08-14 Alex Koutsman <alex.koutsman@cern.ch>
+	M       src/CombineWorkSpaces.cxx
+	* Fixed nuisance parameters being stored correctly in ModelConfig in CombineWorkspaces.cxx
+
+2013-08-12 Max Baak <mbaak@cern.ch>
+        M       setup.sh
+        * Revert to Python version 2.6.5, this works okay (again) on lxplus.
+
+2013-08-09 Alex Koutsman <alex.koutsman@cern.ch>
+	M       src/CombineWorkSpaces.cxx
+	M       src/Utils.cxx
+	* Fixed some bugs in CombineWorkspaces.cxx, so that combination data and pdf can now be fit to each other
+	*	Some minor naming issues remain, to be followed up.
+	* Added some catches in Util::resetError() function for combination workspaces
+
+2013-08-06 Alex Koutsman <alex.koutsman@cern.ch>
+	M       src/CombineWorkSpaces.cxx
+	* Solved re-introduced bug for collecting hypotests
+	*	 for combination of workspaces, one must add "+combined" (where combined is the workspace name in file) to the format string
+	*	 Example : format2 = 'filename+/afs/cern.ch/atlas/project/cern/susy/users/jlorenz/Sig_SM_SS1step_%f_%f_%f+combined'
+	* Added more debug print statements
+
+2013-08-05 Alex Koutsman <alex.koutsman@cern.ch>
+	M       src/CombineWorkSpaces.cxx
+	* Solved bug, where combination pdf category was out of sync with combination data
+	* Added more print statements and fixed naming-problems
+
+2013-07-26 Max Baak <mbaak@cern.ch>
+        M       setup.sh
+        * Private version of root 5.34.09, which uses minuit2 in the asymptotic calculator, and has looser requirements for successful fits. (= needs only a valid minimum)
+	* Python version 2.7.3
+	
+2013-07-25 Max Baak <mbaak@cern.ch>
+	M       python/configManager.py
+	M       python/sample.py
+	M       python/systematic.py
+	* Possibility to different nominal tree for systematics evaluation.
+	* Use ala:
+	jes       = Systematic("JES",    "_NoSys", "_JESup"    ,"_JESdown"    ,"tree","overallNormHistoSys") # JES uncertainty - for low pt jets
+        jes.differentNominalTreeWeight = True 
+	* Tagging HistFitter-00-00-30 
+
+
+2012-12-05 Alex Koutsman <alex.koutsman@cern.ch>
+	M 	Utils.cxx
+	* Fixed the NLL plotting for Inf/NaN-error and wrong range setting.
+	
+2013-06-18 Max Baak <mbaak@cern.ch>
+	M       src/ChannelStyle.cxx
+	M       src/ChannelStyle.h
+	M       configManager.py
+	M       channel.py
+	* Option to add text lines to plots.
+	M	setup.sh
+	M 	Utils.cxx (Alex Koutsman)
+	* Fix of Roofit VisualizeError bug, see:
+	* https://groups.cern.ch/group/hn-atlas-physics-Statistics/Lists/Archive/DispForm.aspx?ID=2070
+	* Switch to head of root-5.34-patches branches for fix.
+	* Tagging HistFitter-00-00-29
+
+2013-06-12 Max Baak <mbaak@cern.ch>
+	* Several minor updates
+	M       ChannelStyle.cxx
+	M       ValidationUtils.cxx
+	M       ValidationUtils.h
+        M       HistFitter.py
+        M       prepareHistos.py
+        M       configManager.py
+	* Option to pickup histograms from a backup file. 
+	* Use this to run discovery mode, using histograms from background-only mode
+	M       fitConfig.py
+	M       channel.py
+	* Possibility to set luminosity in channelStyle, to be plotted instead of lumi in config file.	
+	* (in case of prescaled triggers)
+
+2013-05-29  Zach Marshall <zach.marshall@cern.ch>
+	M       src/Utils.cxx
+	* Moving to one NLL/PLL plot per canvas (no divide) so that they are
+	legible together
+
+2013-05-05 Max Baak <mbaak@cern.ch>
+	M       configManager.py
+	M       channel.py
+	* Fix: remapping of overall systematics was broken in the trunk
+        * Tagged HistFitter-00-00-28
+
+2013-04-24 Max Baak <mbaak@cern.ch>
+	M       Utils.cxx
+	M       src/HypoTestTool.cxx
+	* Added GlobalObservables() and Offset() to createNll() calls.
+        * Tagged HistFitter-00-00-27
+
+2013-04-24 Max Baak <mbaak@cern.ch>
+        * Tagged HistFitter-00-00-26
+
+2013-04-24 Max Baak <mbaak@cern.ch>
+	M	setup.sh
+	* Point to root v5.34.06, with several important bug roofit and roostats bug fixes
+	* http://root.cern.ch/drupal/content/root-version-v5-34-00-patch-release-notes
+	M       scripts/YieldsTable.py
+	M       scripts/SysTable.py
+	* Use minos error by default if available
+	M       src/Utils.cxx
+	* Fix small compiler warning.
+	* Plot PLL curve for minos parameters
+
+2013-04-12 Max Baak <mbaak@cern.ch>
+	M       src/Utils.cxx
+	M       setup.sh
+	* point setup file to root trunk
+	* Fit uses Minuit2
+
+2013-04-08 Max Baak <mbaak@cern.ch>
+        M       Utils.cxx
+        M       Utils.h
+        * Always force evaluation of Hesse
+        * Update of plotNLL function.
+        * Added function to change interpolation code
+        M       src/ConfigMgr.cxx
+        * overwrite default fit - change from piece-wise linear to 6th order poly interp + linear extrapolation (also used in Higgs group)
+
+2013-04-03 Geert-Jan Besjes <geert-jan.besjes@cern.ch>
+	* check for proper null-ptr in python/prepareHistos.py
+
+2013-04-02 Jeanette Loranz <jeanette.miriam.lorenz@cern.ch>
+        M python/configManager.py
+        M python/histogramsManager.py
+        * bug fixes in userNormHistosys and userHistoSys
+
+2013-04-02 David Cote <david.cote@cern.ch>
+	* Updated to more robust pattern for region and component names matching in ChannelStyle.cxx and Utils.cxx
+
+2013-03-28 Max Baak <mbaak@cern.ch>
+	M       scripts/YieldsTable.py
+	M       scripts/SysTable.py
+	M       src/Utils.cxx
+	M       src/Utils.h
+	* Introduced option -y for YieldsTable.py and SysTable.py to use symmetrized minos errors in tables.
+
+2013-03-06 Max Baak <mbaak@cern.ch>
+	M       setup.sh
+	* Now points to root 5.34.05, to solve this bug:
+	https://savannah.cern.ch/bugs/?98832
+	* and the histfactory bin width bug.
+
+2013-03-05 Max Baak <mbaak@cern.ch>
+	M src/toy_utils.cxx
+	* Don't reject failed fits, but flag them in list file.
+	M setup.sh
+	* Points to root version that applies kick to reset failed fit during hypo test
+
+2013-02-13 Max Baak <mbaak@cern.ch>
+        * Tag before applying some major updates
+        * Tagged HistFitter-00-00-25
+
+2013-02-06 Max Baak <mbaak@cern.ch>
+        * Tagged HistFitter-00-00-24
+
+2013-02-06 Max Baak <mbaak@cern.ch>
+	M       scripts/PrintFitResult.py
+	M       scripts/YieldsTable.py
+	M       scripts/UpperLimitTable.py
+	M       scripts/YieldsTableTex.py
+	M       scripts/SysTable.py
+	* updated namemaps, minor textual updates for printing tables.
+	M	src/toy_utils.cxx
+	* Misfeature. Turned off a check that rejects supposedly failed fits with CLs+b values of 0.5. Warning instead.
+	M       src/Utils.cxx
+	M       src/ConfigMgr.cxx
+	* Restrict lumi parameter range to [0.75,1.25], instead of [0,10] as is default in HistFitter
+	M       setup.sh
+	* Points to a patched version of ROOT, one where the binwidth in HistFactory is fixed (no numerical binwidth error). 
+
+2013-02-06 Max Baak <mbaak@cern.ch>
+	M       configManager.py
+	M       sample.py
+	* possibility to merge overall systematics into one.
+	* sam.mergeOverallSysSet = [name1,name2,etc]
+
+2013-01-30 Max Baak <mbaak@cern.ch>
+        M       prepareHistos.py
+        M       configManager.py
+        M       fitConfig.py
+        M       sample.py
+        * possibility set set additional sample weights in addition with channel cuts
+
+2013-01-29 Geert-Jan Besjes <geert-jan.besjes@cern.ch>
+	* scripts/HistFitter.py: options -m and -D now comma-seperated to prevent
+	argparse hell
+
+2013-01-16 Max Baak <mbaak@cern.ch>
+	M       fitConfig.py
+	M       sample.py
+	* possibility set set additional sample weights in addition with channel cuts
+
+2013-01-16 Max Baak <mbaak@cern.ch>
+        * Tagged HistFitter-00-00-23
+
+2013-01-16 Max Baak <mbaak@cern.ch>
+	M python/sample.py
+	M python/fitConfig.py
+	M python/prepareHistos.py
+	* consistent lower edge between cuts histograms
+
+2013-01-08 Max Baak <mbaak@cern.ch>
+        M       python/fitConfig.py
+	* Fixed buggy bin-boundaries for cuts channels
+
+2013-01-11 David Cote <david.cote@cern.ch>
+	* add -u option to pass arbitrary user-defined string from command line to configMgr.userArg.
+
+2013-01-09 Geert-Jan Besjes <geert-jan.besjes@cern.ch>
+	* src/toy_utils.cxx: hypo test results are perfectly fine without a fit,
+	do not require the presence of a fit result (but use it if there)
+
+2013-01-08 Geert-Jan Besjes <geert-jan.besjes@cern.ch>
+	* src/ConfigMgr.cxx: pass full dirname into prefix for RooStats::AnalyzeHypoTestInverterResult 
+	* src/HypoTestTool.cxx: plots using -l now go into the same directory as
+	the file they used to create, rather than $CWD. Same for
+	the root files with the limit results.
+
+2013-01-08 Max Baak <mbaak@cern.ch>
+	M       python/sample.py 
+	* Change warning into debug statement
+	M       scripts/HistFitter.py
+	* Add python-like -c to command line.
+
+2013-01-07 Geert-Jan Besjes <geert-jan.besjes@cern.ch>
+	* src/Utils.cxx: Util::GetComponent takes extra boolean parameter; if set
+	to true, will not search for short region names but assumes the given name
+	is the full one
+	* scripts/YieldsTableTex.py: no longer check "if sample in name", but
+	rather exact match -> issues with channels such as "ttbar" and "ttbarV"
+	resolved (only one of them shows up otherwise)
+
+2012-12-21 Geert-Jan Besjes <geert-jan.besjes@cern.ch>
+	* src/toy_utils.cxx: memory leak (fitresult not deleted) fixed
+	* src/CombineWorkSpaces.cxx: memory leak (intermediate hypotest and
+	fitresult pointers not deleted) fixed
+
+2012-12-19 David Cote <david.cote@cern.ch>
+	* added blindVR option to configManager
+	
+2012-12-19 Geert-Jan Besjes <geert-jan.besjes@cern.ch>
+	* scripts/HistFitter.py: argparse bug fixed
+
+2012-12-19 Geert-Jan Besjes <geert-jan.besjes@cern.ch>
+	* scripts/HistFitter.py: argparse.Action classes for arguments using
+	nargs, to prevent eating the configFile. argparse.Action class for the
+	configFile to prevent it then overwriting the proper setting with None.
+	* python/configManager.py: introduction of runOnlyNominalXSec: for
+	fixSigXSec=True, run only the nominal fit instead of up and down
+	* src/configMgr.cxx: idem
+
+2012-12-19 Max Baak <mbaak@cern.ch>
+	M       python/configManager.py
+	M       python/fitConfig.py
+	M       python/sample.py
+	M       python/systematic.py
+	* Option to replace channel systematics from that of different channel
+
+2012-12-19 David Cote <david.cote@cern.ch>
+	* Tagged HistFitter-00-00-22
+
+2012-12-17  Zach Marshall <zach.marshall@cern.ch>
+	* src/HypoTestTool.cxx: Adding some helpful debugging output
+	* src/Utils: Moving to folder-based plots
+	* macros/contours: Adding python-based plotting macros
+ 
+2012-12-14 David Cote <david.cote@cern.ch>
+	* Added configurable HypoTestName with syntax: myFitConfig.hypoTestName="MyName_200_100"
+	* Bug fix in construction fitChannels string of GenerateFitAndPlot function in Utils.cxx
+
+2012-12-14 Geert-Jan Besjes <geert-jan.besjes@cern.ch>
+	* python/sample.py: throw a warning for sample names starting with digits.
+	For signal samples starting with a digit, HistFactory misses parameters in
+	the workspace for unknown reasons. 
+
+2012-12-11 Alex Koutsman <alex.koutsman@cern.ch>
+	   * scripts/HistFitter.py : added -m/--minos option that must be run with an argument, either "ALL" or a space separate string of parameters
+	   * src/Utils.cxx : added minos error calculation
+	   * src/Utils.h : added minos error calculation
+
+2012-15-10 Geert-Jan Besjes <geert-jan.besjes@cern.ch>
+	* scripts/HistFitter.py: allow nargs="+" for args.configFile, so that user
+	can access e.g. sys.argv[-1] themselves - this was not allowed due to
+	strict number of args checking by argparse
+
+2012-15-05 Max Baak <mbaak@cern.ch>
+	M python/systematic.py
+        * Another fix needed for case below where treeName would be improperly set
+        M python/sample.py 
+        M src/Utils.cxx
+	* converted two warning statements into info.
+	* Tagged as HistFitter-00-00-21-01
+
+2012-12-05 Alex Koutsman <alex.koutsman@cern.ch>
+	* scripts/YieldsTableTex.py: negative errors on yields are now automatically truncated in case they are larger than the central bkg value
+	* Tagging HistFitter-00-00-21
+
+2012-12-04 Geert-Jan Besjes <geert-jan.besjes@cern.ch>
+	* channelxml.py and topLevelxml.py recreated for backwards compatibility.
+
+2012-12-04 Geert-Jan Besjes <geert-jan.besjes@cern.ch>
+	* Fixed issue where treeName would be improperly set for weight-based
+	systematics. The solution assumes the old code, and checks if the tree
+	name exists. If not, a treeName set to the name of the associated sample
+	(plus possible prefix) is used for both high and low. This issue stems
+	from a philosophical difference in approach with inputs: one tree
+	containing branches for high and low, versus two trees (one each for high
+	and low respectively). Issue needs more permanent resolving; current code
+	is several hacks on top of each other.
+
+2012-12-03 Max Baak <mbaak@cern.ch>
+	M       configManager.py
+	M       fitConfig.py
+	* New feature: for overall sys, possibly use different channel to evaluate systematics
+	M       prepareHistos.py
+	M       configManager.py
+	M       sample.py
+	M       systematic.py
+
+
+2012-12-02 Geert-Jan Besjes <geert-jan.besjes@cern.ch>
+    * scripts/HistFitter.py: missing nargs="+", strings would get chopped up
+
+2012-11-27 Alex Koutsman <alex.koutsman@cern.ch>
+	* src/Utils.cxx fixed bug in GetFullRegionName function used by YieldsTable script
+
+2012-11-27 Alex Koutsman <alex.koutsman@cern.ch>
+	* these changes were alrady done on 2012-11-14, but did not get saved in svn or overwritten  (?)
+	* macros/Examples/pythonFreeConfig/Config_pythonFree.C : addition of example macro to run HistFitter C++ side without python side
+	* src/ChannelStyle.cxx : adjustments for unknown samples	
+	* src/ChannelStyle.h : addition of addSample() function		
+	* python/configManager.py : using addSample function
+	* src/Utils.cxx : fix in PlotNL function for inf/Nan propagated to plot error
+
+2012-11-26 Geert-Jan Besjes <geert-jan.besjes@cern.ch>
+	M       python/configManager.py
+	M       python/prepareHistos.py
+	M       python/systematic.py
+	M       scripts/HistFitter.py
+	* Improvements to speed; ~8% speed gain when running over 12 grid points
+
+2012-11-22 Max Baak <mbaak@cern.ch>
+	M       python/configManager.py
+	* Change a mkdir into mkdir_p
+
+2012-11-22 Max Baak <mbaak@cern.ch>
+	M       python/configManager.py
+	M       python/MyConfigExampleMCStat.py
+	* updated mc stat uncertainty implementation. Now much simpler to implement for user.
+	* Tagging: HistFitter-00-00-19-02
+
+2012-11-21 Max Baak <mbaak@cern.ch>
+	M       MyConfigExampleMCStat.py
+	* commited wrong config file. argh
+        * Tagging: HistFitter-00-00-19-01
+
+2012-11-21 Max Baak <mbaak@cern.ch>
+	* Tagging: HistFitter-00-00-19
+
+2012-11-21 Max Baak <mbaak@cern.ch>
+	A       MyConfigExampleMCStat.py
+	M       MyConfigExample.py
+	* Example for alternative mc stat implementation, where the MC stat error is implemented per sample. 
+	M 	setup.sh
+	* Revert to root 5.34.02 -- plotting issue (see comment Alex below)
+
+2012-11-21 Geert-Jan Besjes <geert-jan.besjes@cern.ch>
+    * fixed an issue where HistoSys-based histograms had high/low reverted,
+	  which lead to a factor -1 compared to old results (when not using XML)
+
+2012-11-21 Max Baak <mbaak@cern.ch>
+	M       ConfigMgr.cxx
+	M       Makefile
+	M       HypoTestTool.cxx
+	M       ChannelStyle.h
+	* Minor changes to fix compiler problems or warnings on mac. 
+
+	
+2012-11-14 Geert-Jan Besjes <geert-jan.besjes@cern.ch>
+    * scripts/HistFitter.py: reverted back to -d and -D. See inline comment
+                             for explanation. Necessary due to 
+                             http://bugs.python.org/issue9338
+
+2012-11-13 Alex Koutsman <alex.koutsman@cern.ch>
+	* Utils.cxx : bug fix in ratio calculation, only affects crash with ROOT 5.34.03 while plotting, nothing changes in calculated values
+
+2012-11-13 Max Baak <mbaak@cern.ch>
+	M       configManager.py
+	M       sample.py
+	M       systematic.py
+	M       MyConfigExample.py
+	* Added "shapeStat" systematic, which does statistical errors per sample (i.e. not summed up)
+
+2012-11-13 Geert-Jan Besjes <geert-jan.besjes@cern.ch>
+	* python/measurement.py: user-set measurement name is now properly used
+
+2012-11-12 Alex Koutsman <alex.koutsman@cern.ch>
+	* LinkDef.h : inclusion new ROOT class ChannelStyle for smoother transition to decoupled C++ side, no real change for users
+	* ChannelStyle.cxx : new ROOT class ChannelStyle, that defines all plotting options for each channel
+	* ChannelStyle.h : new ROOT class ChannelStyle, that defines all plotting options for each channel
+	* FitConfig.cxx : moving many functions/functionality to ChannelStyle
+	* FitConfig.h : moving many functions/functionality to ChannelStyle
+	* Utils.h : adjustments for ChannelStyle
+	* Utils.cxx : adjustments for ChannelStyle, addition of flags to GenerateFitAndPlot function to turn on plots at command line
+	* python/configManager.py : adjustments for ChannelStyle
+	
+2012-11-12 Geert-Jan Besjes <geert-jan.besjes@cern.ch>
+	* scripts/HistFitter.py: -D is -d again; using without options gives old
+	                         behaviour (before+after)
+
+2012-11-12 Geert-Jan Besjes <geert-jan.besjes@cern.ch>
+	* python/fitConfig.py: statErrorType property added, plus option to set it
+                           progagate down to channels in config 
+                           constructorInit uses mkdir_p implementation for new directories
+	* scripts/HistFitter.py: now uses argparse; -d is the old draw setting, Alex'
+                             --draw is now -D. Other changes: --ty -> -T, fit
+                             types via -F (two-letter shorts not allowed) 
+	* setup.sh: if-statement to check hostname; lx* will take gcc from afs
+
+2012-11-07 Evgeny Khramov <Evgeniy.Khramov@cern.ch>
+	* UpperLimitTable.py: set the workspace name for each individual channel
+
+2012-11-07 Geert-Jan Besjes <geert-jan.besjes@cern.ch>
+	* setup.sh: source statement for gcc breaks setups when running locally.
+				This ought to be made an optional argument!
+	* src/Utils.cxx: indenting identical to other .cxx files
+	* src/Utils.cxx: GenerateFitAndPlot removed extra GEndl statements
+	* scripts/HistFitter.py: print statements now through logger
+
+2012-11-07 Alex Koutsman <alex.koutsman@cern.ch>
+	* python/configManager.py : small addition of function setting for C++ cfgMgr
+	* scripts/HistFitter.py : addition of GenerateFitAndPlotCPP function and --draw command with options
+	* src/Utils.cxx : addition of GenerateFitAndPlot() function in C++, to decouple C++ side from python
+	* src/FitConfig.cxx : small cleaning adjustments
+	* src/ConfigMgr.cxx  : small cleaning adjustments
+	* src/Utils.h  : addition of GenerateFitAndPlot() function in C++
+	* src/FitConfig.h  : small cleaning adjustments
+	* src/ConfigMgr.h  : small cleaning adjustments
+
+2012-11-06 Alex Koutsman <alex.koutsman@cern.ch>
+	* src/Utils.cxx: clean up of DecomposeWS
+	* src/Utils.h: addition of some functions (incomplete functionality)
+	* src/FitConfig.h: add function addSample(samplename, color)
+	* set default ROOT version to 5.34.02 (small configuration bug in 5.34.03)
+	
+2012-11-01  Zach Marshall <zach.marshall@cern.ch>
+	* src/Utils.cxx: Allow white samples
+	* python/prepareHistos.py: Handle negative QCD bins safely
+	* python/configManager.py: QCD normalization in the same region is the same, independent of plotting
+	* python/sample.py: Protecting against strings being put in as numbers for systematics
+	* python/channel.py, python/fitConfig.py: Moving to directory-based output structure
+	* docs/todo: Updating
+	* src/toy_utils.cxx: Protecting against additional fit failure modes, loosening cov. matrix quality cut
+	* macros/Examples/p-values/compute_p0.C: Generic script from Aaron Armbruster for computing p-values
+	* macros/Examples/upperlimit/upperlimit.C: Modifications for stability and quiet from Aaron A.
+	* setup.sh: Moving gcc and python setups outside of ROOTSYS if to get batch running working
+	* macros/contourplot/makelistfiles.C: CollectAndWriteHypoTestResults not in Combination namespace any more
+	* macros/contourplot/contourmacros/SUSY_m0_vs_m12_all_withBand_cls.C: Cleanup and common use of HistFitterUser
+	* macros/contourplot/makecontourhists.C: Cleanup and demonstrating repeated use in a nicer way
+	* src/Utils.cxx: Fixing compiler warnings - note that you should not mix Logger/GEndl and cout/endl
+
+2012-11-02 Max Baak <mbaak@cern.ch>
+	M       Utils.cxx
+	M       Utils.h
+	* Turn on again PlotPdfSumComponents (functions by Alex)
+
+2012-10-25 Geert-Jan Besjes <geert-jan.besjes@cern.ch>
+	* Fix a segfault occuring in ConfigMgr.cxx when using an empty region in
+	  combination with the theory band. w->var("alpha_SigXSec") could end up
+	  being NULL
+
+2012-10-23 Geert-Jan Besjes <geert-jan.besjes@cern.ch>
+	* LinkDef.h now includes all the functions previously in the Combination
+	  namespace
+
+2012-10-22 Geert-Jan Besjes <geert-jan.besjes@cern.ch>
+	* Now supports direct writing of workspacea
+	* HistFitter -X uses the old code path to create XML files by hand
+	* Compatibility with ROOT v5.32 now definitely broken
+	* removeSystematic() methods can now take SystematicBase objects next to
+	  strings with the name 
+
+2012-10-22 Max Baak <mbaak@cern.ch>
+	M       configManager.py
+	M       sample.py
+	M       systematic.py
+	* Introduce histoSysOneSideSym
+
+2012-10-19 Max Baak <mbaak@cern.ch>
+	* Updates for root 5.34, minor patches to get this to work.
+	* Migration to python 2.6.5
+	* Otherwise equivalent to HistFitter-00-00-17
+	* Tagging as: HistFitter-00-00-18 
+
+2012-10-19 Max Baak <mbaak@cern.ch>
+        * Multiple minor bug-fixes for normalized histograms b/n control and signal regions. 
+        * Now achieves numerically identical results wrt HF-13 for 0-lepton fit.
+        * Introduction of dedicated logger to stream-line output on screen (by Geert-Jan)
+        * Tagging: HistFitter-00-00-17
+        * This is the last tag supported for root 5.32
+        * Official recommendation is to now use this tag instead of: HistFitter-00-00-13 
+
+2012-10-02 David Cote <david.cote@cern.ch>
+	* Multiple bug fixes. Achieves numerically identical results w.r.t. HistFitter-00-00-13-03
+	  for normFactor + stat + userNormHistSys. Similar but not identical results for HistoSys and OverallSys.
+	* Tagging: HistFitter-00-00-16
+
+2012-09-20 David Cote <david.cote@cern.ch>
+	* Work in progress tag to request feedback about recent commits
+	* The code runs without known crashes, but gives different results w.r.t.
+	  HistFitter-00-00-13 which are not yet understood
+	* Tagging: HistFitter-00-00-15
+
+2012-09-04 Max Baak <mbaak@cern.ch>
+        * Development tag - *before* migrating in the 0-lepton changes.
+        * HistFitter-00-00-14
+
+2012-09-04 David Cote <david.cote@cern.ch>
+	* large bunch of code from Tobias Binder to simplify configManager.execute()
+	* re-implemented blinding with configManager options 
+	  blindSR=True/False, blindCR=True/False and useSignalInBlindedData=True/False
+
+2012-08-28 Max Baak <mbaak@cern.ch>
+        * RooStats BUG Fix to _always_ use QTilde in AsymptoticCalculator.
+        * HistFitter-00-00-13
+
+2012-06-27 Max Baak <mbaak@cern.ch>
+        * Added setup file for using eos at cern: setupeos.sh
+        * HistFitter-00-00-12
+
+2012-06-21 Evgeny Khramov <evgeniy.khramov@cern.ch>
+  * Some beautification tuning of plots: legend, log scale, ATLAS and lumi labels are set permanently
+
+2012-06-21 Dan Short <daniel.short@cern.ch>
+	* Added new options for blinding
+	* HistFitter-00-00-10
+
+2012-06-14 David Cote <david.cote@cern.ch>
+	* Macros clean-up by Max
+	* New utility functions in configWriter/Manager
+	* Extensively tested with HistFitterUser-00-00-01 for MET+jets+leptons
+	* Tagging HistFitter-00-00-09
+	
+2012-06-08 David Cote <david.cote@cern.ch>
+	* Only minor modifications to python/CombinedKFactorFit_5Channel.py
+	* Tagging HistFitter-00-00-08 (not very significant)
+
+2012-06-01 David Cote <david.cote@cern.ch>
+	* Tag for SUSY approval of MET+jets+leptons on June 5th 2012
+	* Tagging HistFitter-00-00-07
+
+2012-05-30 David Cote <david.cote@cern.ch>
+	* Tag for support note sent to EdBoard on 30.05.2012
+	* Tagging HistFitter-00-00-06
+
+2012-05-09 David Cote <david.cote@cern.ch>
+	* Copy with some clean-up from atlasgrp/Physics/SUSY/Analyses/SusyFitter to
+	  atlastest/Physics/SUSY/Analyses/HistFitter as a temporary work around to atlasgrp svn screw up
+	* Tagging HistFitter-00-00-00
+
+2012-04-26 David Cote <david.cote@cern.ch>
+	* Non backward compatible change to configure input files from Jakub Adamek.
+	Allows to attach input TFiles to systematic->sample->channel->TopLvl->configMgr in the usual logic. 
+	Also see: https://groups.cern.ch/group/atlas-phys-susy-histfitter/Lists/Archive/Flat.aspx?RootFolder=%2Fgroup%2Fatlas-phys-susy-histfitter%2FLists%2FArchive%2Fnon-backward%20compatible%20change%20in%20input%20file%20configuration&FolderCTID=0x0120020041CC9DB0555187419FF9F5C61F43532C
+
+2012-04-25 David Cote <david.cote@cern.ch>
+	* Tagging SusyFitter-00-02-11 in preparation for HistFitter tutorial
+
+2012-01-26 David Cote <david.cote@cern.ch>
+	* Working tag for Rel16 Trees by Carsten for KtScale and KFactors one-lepton fits.
+	* Tagging SusyFitter-00-02-01
+
+2012-01-23 Dan Short <Daniel.Short@cern.ch>
+	* Modified ownership of systematics. Now applied at config level and cloned to channels and topLevs.
+	* Added method options for systematics
+
+2011-12-16 Dan Short <Daniel.Short@cern.ch>
+	* Updated memory management - all ROOT objects should be handled by configMgr ONLY (at interface level). Allows interactive mode functionality
+	
+2011-12-16 Jeanette Loranz <jeanette.miriam.lorenz@cern.ch>
+	* add hypothesis test option in scripts/SusyFitter.py
+
+2011-12-14 David Cote <david.cote@cern.ch>
+	* Last tag before disruptive changes by Dan.
+	* Tagging SusyFitter-00-01-02
+	
+2011-12-13 David Cote <david.cote@cern.ch>
+        * Reversed SusyFitter.py logic to do nothing by default and activate steps with options.
+	* Beta version ready for public use.
+	* Tagging SusyFitter-00-01-01
+
+2011-12-09 David Cote <david.cote@cern.ch>
+        * Completed multi-TopLvlXML loop. Further cosmetic tweaks.
+	* Tagging SusyFitter-00-01-00
+
+2011-12-09 David Cote <david.cote@cern.ch>
+	* Tagging before cleaning-up old obsolete code.
+	* SusyFitter-00-00-05
+	
+2011-12-07 Dan Short <Daniel.Short@cern.ch>
+	* Give configMgr ownership of histograms - stored interactively if run over trees
+	* Bug fix for QCD and memory leak
+	
+2011-12-06 Dan Short <Daniel.Short@cern.ch>
+	* Split execute and initialise
+	* Add -p option to print out histogram names that will be generated
+
+2011-12-06 David Cote <david.cote@cern.ch>
+	* Tagging SusyFitter-00-00-04 before changing the configManager structure
+
+2011-12-05 Dan Short <Daniel.Short@cern.ch>
+	* Added user defined systematic naming
+	* Added systematic from weights (needs testing!)
+	* Naming convention of histograms written to file similar to HistFactory
+
+2011-11-24 Dan Short <Daniel.Short@cern.ch>
+	* Fixed plotting bug in QCD distributions
+	* Changed channel and histo names to have region and variable information
+
+2011-11-19 Dan Short <Daniel.Short@cern.ch>
+	* Working examples for example 4 through 8
+	
+2011-11-18 Dan Short <Daniel.Short@cern.ch>
+	* Added functionality to generate histograms and XML from trees or histograms
+	* Pythonize the histogram generation and XML writing
+	* MajorUpdate python/configWriter.py
+	* Added python/configManager.py
+	* Added python/prepareHistos.py
+	* Added python/writeExample4Prepare.py
+	* Documentation in relevant files
+
+2011-11-06 Dan Short <Daniel.Short@cern.ch>
+	* Updated python/configWriter.py to handle scaling of histograms and toy generation. Also outputs histograms used into new TFile
+	* Added python/generateToys.py to generate toys from a given set of histograms
+	* Added python/writeExample4.py to automate example 4 up to the plot and fit stage from the MapToTH1 stage
+
+2011-11-06 Dan Short <Daniel.Short@cern.ch>
+	* Added python/configWriter.py to provide classes to write and execute HistFactory
+	* Added python/writeHistFactory.py to write and run an example similar to prepareHistFactory
+
+2011-10-31 Dan Short <Daniel.Short@cern.ch>
+	* Updated macros/GenerateToysFromHists.C to remove QCD from toy MC (added after), allow for WTR/full control by --onlyWTR and to get ChanSR and ChanCR from the full distribution
+	* Updated macros/GenerateToysFromHists.C to generate toys for 1 sigma shifts
+
+2011-10-25 Dan Short <Daniel.Short@cern.ch>
+	* Updated example1 to 2 channel fit with separated CR and SR systematics
+	* Added example2 template
+	* Added Toy generation file
+	* Added file to get overall sys values
+	
+2011-10-24 Dan Short <Daniel.Short@cern.ch>
+	* Added files to run Example1 (sample-independent systematics) for Background Forum meeting (see README)
+	* Modified Example1 (sample-independent systematics) to have only 2CR and 1SR
+	* Added python/stripHistos.py to reduce histograms to only necessary bins
+	* Added files to run Example3 (combined systematics with over constrainted fit) for Background Forum meeting (see README)
+	* Added files to run Example4 (combined shape systematics with over constrainted fit) for Background Forum meeting (see README)
+	* Modified files to contain names of placeholders for HistoSys
+	* Added theory uncertainties to all Examples
+	
+2011-10-24 Alex Koutsman <alex.koutsman@cern.ch>
+	* Updated my macros/config-files to the last versions, as shown in today's talk
+        * added pdf component example to PlotExample1.C
+	
+2011-10-21 Dan Short <Daniel.Short@cern.ch>
+	* Updated config_dan/1Ele_3Jet_JEStest_Meff.xml to only do HistoSys for background and only OverallSys for signal
+	* Updated macros_dan/PlotMeffJESShape.C to plot pulls of the normalization factors
+	* Updated data/1Ele_3Jet_JEStest_norm.root to not normalize the systematic shift histograms
+	
+2011-10-20 Dan Short <Daniel.Short@cern.ch>
+	* Updated macros_dan/PlotMeffJESShape.C to get the p-value of the NLL in data compared to the toys
+	* Updated data/1Ele_3Jet_JEStest_norm.root to contain electron and muon energy scale shifts
+	* Updated macros_dan/GenerateToysFromHists.C to generate toys for all variables
+	
+2011-10-19 Dan Short <Daniel.Short@cern.ch>
+	* Removed data/1Ele_3Jet_JEStest.root and data/1Ele_3Jet_JEStest_Fix.root as obsolete
+	* Added macros_dan/GenerateToysFromHists.C to get toys from input histograms
+	* Updated macros_dan/GenerateToysFromHists.C to allow a signal to be implanted
+	* Updated config_dan/1Ele_3Jet_ShapeJES_Meff.xml to exclude signal JES (including it breaks the fit), NormQCD back in
+	* Tagging SusyFitter-00-00-03
+	
+2011-10-18 Dan Short <Daniel.Short@cern.ch>
+	* Removed NormQCD from Meff fit as was causing Migrad to produce negative pdfs
+	* Modifed python normalization file to be more automated
+	
+2011-10-17 Alex Koutsman <alex.koutsman@cern.ch>
+	* Added personal workspace config_alex and macros_alex
+
+2011-10-17 Dan Short <Daniel.Short@cern.ch>
+	* Added personal workspace config_dan and macros_dan
+	
+2011-10-13 Dan Short <Daniel.Short@cern.ch>
+	* Added options to generate toy MCs to validate fits to PlotMeffJESShape.C
+
+2011-10-11 Dan Short <Daniel.Short@cern.ch>
+	* Fixed bugs in plotting macros for meff and nJets
+
+2011-10-10 Dan Short <Daniel.Short@cern.ch>
+	* Added example fit in multiple channels (see README)
+	* Tagging SusyFitter-00-00-02
+	
+2011-10-08 David Cote <david.cote@cern.ch>
+	* First version of (MT,MET) plus signal region (see README)
+	* Tagging SusyFitter-00-00-01
+
