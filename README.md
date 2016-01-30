@@ -1,2 +1,2 @@
-# mctools-docker
-dockerfiles for Monte Carlo tools
+# hepsw-docker
+dockerfiles for HEP tools
