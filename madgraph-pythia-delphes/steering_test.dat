@@ -1,0 +1,33 @@
+!-------- Settings used in the main program.
+Main:numberOfEvents   = {{NEVTS}}   ! number of events to generate (-1 for all)
+Main:timesAllowErrors = 3          ! how many aborts before run stops
+Main:spareMode1 = 0                ! skip n events at beginning of file
+
+!-------- Settings related to output in init(), next() and stat().
+Init:showChangedSettings = on      ! list changed settings
+Init:showChangedParticleData = on  ! list changed particle data
+Next:numberCount       = 100     	 ! print message every n events
+Next:numberShowInfo    = 1         ! print event information n times
+Next:numberShowProcess = 1         ! print process record n times
+Next:numberShowEvent   = 1         ! print event record n times
+
+!-------- Madgraph run:
+Beams:LHEF = {{LHEF}}
+Beams:frameType = 4
+
+!-------- Enable matching
+JetMatching:merge = on
+JetMatching:scheme = 1
+JetMatching:setMad = off
+JetMatching:qCut = 20.0
+JetMatching:coneRadius = 1.0
+JetMatching:etaJetMax = 10.0
+JetMatching:nJetMax = 3
+
+!-------- Other settings
+!HadronLevel:all       = off       ! switch off hadronisation for testing only
+!PartonLevel:MPI			 = off
+!PartonLevel:ISR			 = off
+!PartonLevel:FSR			 = off
+!PartonLevel:Remnants	 = off
+!Check:event 					 = off
