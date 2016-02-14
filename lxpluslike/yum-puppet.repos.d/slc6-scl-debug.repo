@@ -1,0 +1,9 @@
+[slc6-scl-debug]
+gpgcheck=1
+exclude=
+enabled=0
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-cern
+name=Scientific Linux CERN - SCL addons (Debug RPMs)
+baseurl=http://linuxsoft.cern.ch/cern/scl/slc6X/x86_64/yum/scl-debug
+priority=10
+includepkgs=

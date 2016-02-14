@@ -1,0 +1,6 @@
+[sectools6-testing-source]
+gpgcheck=0
+enabled=0
+name=Security tools for the Agile Infrastructure project [testing] (source)
+baseurl=http://linuxsoft.cern.ch/internal/repos/sectools6-testing/source/SRPMS
+priority=4

@@ -1,0 +1,8 @@
+[elrepo-source]
+gpgcheck=1
+enabled=0
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-elrepo.org
+name=El Repo, the Community Enterprise Linux Repository - Source
+baseurl=http://linuxsoft.cern.ch/elrepo/elrepo/el6/SRPMS
+priority=30
+includepkgs=

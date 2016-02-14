@@ -1,0 +1,6 @@
+[sectools6-stable-source]
+gpgcheck=0
+enabled=0
+name=Security tools for the Agile Infrastructure project [stable] (source)
+baseurl=http://linuxsoft.cern.ch/internal/repos/sectools6-stable/source/SRPMS
+priority=4

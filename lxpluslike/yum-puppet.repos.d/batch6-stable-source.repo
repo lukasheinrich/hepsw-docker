@@ -1,0 +1,6 @@
+[batch6-stable-source]
+gpgcheck=0
+enabled=0
+name=CERN Batch specific software [stable] (source)
+baseurl=http://linuxsoft.cern.ch/internal/yumsnapshot/20160209/batch/batch6-stable/source/SRPMS
+priority=10

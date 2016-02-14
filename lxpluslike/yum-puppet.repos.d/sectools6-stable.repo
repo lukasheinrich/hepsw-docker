@@ -1,0 +1,6 @@
+[sectools6-stable]
+gpgcheck=0
+enabled=1
+name=Security tools for the Agile Infrastructure project [stable]
+baseurl=http://linuxsoft.cern.ch/internal/repos/sectools6-stable/x86_64/os
+priority=4

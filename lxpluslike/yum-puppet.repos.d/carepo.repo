@@ -1,0 +1,6 @@
+[carepo]
+baseurl=http://linuxsoft.cern.ch/egi/production/cas/1/current/
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/GPG-KEY-EUGridPMA-RPM-3
+name=IGTF CA Repository
+enabled=1

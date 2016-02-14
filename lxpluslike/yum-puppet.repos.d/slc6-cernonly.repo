@@ -1,0 +1,9 @@
+[slc6-cernonly]
+gpgcheck=1
+exclude=libxerces-c-3_1,python-logilab-*,lucene-demo
+enabled=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-cern
+name=Scientific Linux CERN - CERNOnly (RPMs) [20160209]
+baseurl=http://linuxsoft.cern.ch/internal/yumsnapshot/20160209/cern/slc6X/x86_64/cernonly
+priority=10
+includepkgs=

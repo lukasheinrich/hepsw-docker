@@ -1,0 +1,8 @@
+[epel-source]
+gpgcheck=1
+exclude=condor,condor-*,voms-clients,castor,xrootd-*,and,collectd*,supervisor,puppet,puppet-server,facter,mcollective*,hiera*,rubygem-stomp
+enabled=0
+gpgkey=http://linuxsoft.cern.ch/epel/RPM-GPG-KEY-EPEL-6
+name=Extra Packages for Enterprise Linux - Source
+baseurl=http://linuxsoft.cern.ch/epel/6/SRPMS
+priority=20

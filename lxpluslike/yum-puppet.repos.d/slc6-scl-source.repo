@@ -1,0 +1,9 @@
+[slc6-scl-source]
+gpgcheck=1
+exclude=
+enabled=0
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-cern
+name=Scientific Linux CERN - SCL addons (Source RPMs)
+baseurl=http://linuxsoft.cern.ch/cern/scl/slc6X/x86_64/yum/scl-source
+priority=10
+includepkgs=

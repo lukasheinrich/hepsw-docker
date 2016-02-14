@@ -1,0 +1,6 @@
+[sectools6-stable-debug]
+gpgcheck=0
+enabled=0
+name=Security tools for the Agile Infrastructure project [stable] (debuginfo)
+baseurl=http://linuxsoft.cern.ch/internal/repos/sectools6-stable/x86_64/debug
+priority=4

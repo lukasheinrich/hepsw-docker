@@ -1,0 +1,8 @@
+[elrepo-testing]
+gpgcheck=1
+enabled=0
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-elrepo.org
+name=El Repo, the Community Enterprise Linux Repository - Testing
+baseurl=http://linuxsoft.cern.ch/elrepo/testing/el6/x86_64
+priority=30
+includepkgs=

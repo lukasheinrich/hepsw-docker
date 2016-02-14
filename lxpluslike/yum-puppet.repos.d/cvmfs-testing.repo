@@ -1,0 +1,8 @@
+[cvmfs-testing]
+baseurl=http://cern.ch/cvmrepo/yum/cvmfs-testing/EL/6/x86_64
+includepkgs=cvmfs,cvmfs-keys,cvmfs-server,cvmfs-config-default
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CernVM
+name=CVMFS yum testing repository for el6
+priority=80
+enabled=1

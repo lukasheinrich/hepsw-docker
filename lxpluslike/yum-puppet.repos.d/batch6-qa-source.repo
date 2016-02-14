@@ -1,0 +1,6 @@
+[batch6-qa-source]
+gpgcheck=0
+enabled=0
+name=CERN Batch specific software [QA] (source)
+baseurl=http://linuxsoft.cern.ch/internal/repos/batch6-qa/source/SRPMS
+priority=10

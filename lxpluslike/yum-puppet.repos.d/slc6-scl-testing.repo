@@ -1,0 +1,9 @@
+[slc6-scl-testing]
+gpgcheck=1
+exclude=
+enabled=0
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-cern
+name=Scientific Linux CERN - SCL addons - testing
+baseurl=http://linuxsoft.cern.ch/cern/scl/slc6X/testing/x86_64/yum/scl-testing
+priority=10
+includepkgs=

@@ -1,0 +1,6 @@
+[lemon6-qa]
+gpgcheck=0
+enabled=1
+name=lemon [QA]
+baseurl=http://linuxsoft.cern.ch/internal/repos/lemon6-qa/x86_64/os
+priority=99

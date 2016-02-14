@@ -1,0 +1,8 @@
+[epel-debug]
+gpgcheck=1
+exclude=condor,condor-*,voms-clients,castor,xrootd-*,and,collectd*,supervisor,puppet,puppet-server,facter,mcollective*,hiera*,rubygem-stomp
+enabled=0
+gpgkey=http://linuxsoft.cern.ch/epel/RPM-GPG-KEY-EPEL-6
+name=Extra Packages for Enterprise Linux - Debug [20160209]
+baseurl=http://linuxsoft.cern.ch/internal/yumsnapshot/20160209/epel/6/x86_64/debug
+priority=20
