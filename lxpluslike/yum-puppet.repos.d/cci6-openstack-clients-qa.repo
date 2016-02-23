@@ -1,0 +1,7 @@
+[cci6-openstack-clients-qa]
+baseurl=http://linuxsoft.cern.ch/internal/repos/openstackclients6-juno-qa/x86_64/os/
+includepkgs=python-keystoneclient-kerberos,python-keystoneclient-x509
+gpgcheck=0
+name=CERN rebuilds for OpenStack clients - QA
+priority=5
+enabled=1

@@ -1,0 +1,6 @@
+[lemon6-stable-source]
+gpgcheck=0
+enabled=0
+name=lemon [stable] (source)
+baseurl=http://linuxsoft.cern.ch/internal/repos/lemon6-stable/source/SRPMS
+priority=99

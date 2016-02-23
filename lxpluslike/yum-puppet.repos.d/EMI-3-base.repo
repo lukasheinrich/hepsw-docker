@@ -1,0 +1,9 @@
+[EMI-3-base]
+baseurl=http://linuxsoft.cern.ch/internal/yumsnapshot/20160209/emi/3/sl6/x86_64/base
+includepkgs=glite-wms-utils-exception,lcg-info,glite-ce-cream-*,glite-wms-utils-classad,glite-jdl-api-cpp,glite-lbjp-common-gsoap-plugin,glite-wms-ui-commands,fts2-client,glite-wms-ui-api-python,glite-jdl-api-cpp,glite-jobid-api-c,glite-lb-client,glite-lb-common,glite-lbjp-common-gss,glite-lbjp-common-trio,glite-wms-ui-api-python,glite-wms-utils-classad,glite-wms-utils-exception,glite-wms-wmproxy-api-cpp,voms-clients3,canl-java,voms-api-java3,voms-admin-client,bouncycastle-mail,classads
+gpgcheck=0
+exclude=unset
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-emi
+name=EMI3 base software
+priority=15
+enabled=1

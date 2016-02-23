@@ -1,0 +1,6 @@
+[ai6-testing]
+gpgcheck=0
+enabled=0
+name=Utilities for the Agile Infrastructure project [testing]
+baseurl=http://linuxsoft.cern.ch/internal/repos/ai6-testing/x86_64/os
+priority=30

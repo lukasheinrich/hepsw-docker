@@ -1,0 +1,6 @@
+[ai6-stable]
+gpgcheck=0
+enabled=1
+name=Utilities for the Agile Infrastructure project [stable]
+baseurl=http://linuxsoft.cern.ch/internal/repos/ai6-stable/x86_64/os
+priority=30

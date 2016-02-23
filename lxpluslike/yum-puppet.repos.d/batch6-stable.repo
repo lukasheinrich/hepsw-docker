@@ -1,0 +1,6 @@
+[batch6-stable]
+gpgcheck=0
+enabled=1
+name=CERN Batch specific software [stable]
+baseurl=http://linuxsoft.cern.ch/internal/yumsnapshot/20160209/batch/batch6-stable/x86_64/os
+priority=10

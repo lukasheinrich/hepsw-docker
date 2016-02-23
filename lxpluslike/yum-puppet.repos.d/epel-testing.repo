@@ -1,0 +1,8 @@
+[epel-testing]
+gpgcheck=1
+exclude=condor,condor-*,voms-clients,castor,xrootd-*,and,collectd*,supervisor,puppet,puppet-server,facter,mcollective*,hiera*,rubygem-stomp
+enabled=0
+gpgkey=http://linuxsoft.cern.ch/epel/RPM-GPG-KEY-EPEL-6
+name=Extra Packages for Enterprise Linux - Testing
+baseurl=http://linuxsoft.cern.ch/epel/testing/6/x86_64
+priority=20

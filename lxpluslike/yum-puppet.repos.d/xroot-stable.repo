@@ -1,0 +1,6 @@
+[xroot-stable]
+baseurl=http://linuxsoft.cern.ch/internal/yumsnapshot/20160209/xrootd/stable/slc/6/x86_64/
+gpgcheck=0
+name=XRootD Stable repository - CERN mirror - 6/x86_64
+priority=10
+enabled=1

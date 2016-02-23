@@ -1,0 +1,7 @@
+[htcondor-development]
+baseurl=http://linuxsoft.cern.ch/htcondor/htcondor-x86_64/RPMS.htcondor-dev-rhel6
+gpgcheck=0
+exclude=condor.i386
+name=HTCondor Development RPM Repository for Redhat Enterprise Linux 6
+priority=99
+enabled=1

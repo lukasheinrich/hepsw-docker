@@ -1,0 +1,8 @@
+[slc6-devtoolset-testing-debug]
+gpgcheck=1
+enabled=0
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-cern
+name=Scientific Linux CERN - Devtoolset addons - testing (Debug RPMs)
+baseurl=http://linuxsoft.cern.ch/cern/devtoolset/slc6X/testing/x86_64/yum/devtoolset-testing-debug
+priority=10
+includepkgs=

@@ -1,0 +1,29 @@
+Loaded plugins: kernel-module, priorities, refresh-packagekit, rpm-warm-cache,
+              : security, versionlock
+385 packages excluded due to repository priority protections
+repo id                repo name                                      status
+EMI-3-base             EMI3 base software                                 21+423
+EMI-3-contribs         EMI3 contributions                                      0
+EMI-3-third-party      EMI3 third party                                     2+57
+EMI-3-updates          EMI3 updates                                       88+965
+ai6-stable             Utilities for the Agile Infrastructure project  1,194+149
+batch6-stable          CERN Batch specific software [stable]               303+1
+carepo                 IGTF CA Repository                                  2,090
+castor                 CASTOR Repositories in LINUXSOFT                      544
+cci6-openstack-clients CERN rebuilds for OpenStack clients                   2+6
+cci6-rdo-openstack     Openstack RDO                                      16+175
+cvmfs                  CVMFS yum repository for el6                        21+22
+cvmfs-testing          CVMFS yum testing repository for el6                42+23
+epel                   Extra Packages for Enterprise Linux [20160204] 11,750+235
+htcondor-development   HTCondor Development RPM Repository for Redhat     243+20
+lemon6-stable          lemon [stable]                                      405+2
+sectools6-stable       Security tools for the Agile Infrastructure pr          3
+slc6-cernonly          Scientific Linux CERN - CERNOnly (RPMs) [20160        314
+slc6-devtoolset        Scientific Linux CERN - Devtoolset addons             506
+slc6-extras            Scientific Linux CERN - Extras (RPMs) [2016020     705+26
+slc6-os                Scientific Linux CERN (RPMs) [20160204]           6,793+3
+slc6-scl               Scientific Linux CERN - SCL addons                  2,472
+slc6-updates           Scientific Linux CERN - Updates (RPMs) [201602  21,667+29
+xroot-stable           XRootD Stable repository - CERN mirror - 6/x86        218
+xroot-stable-multiarch XRootD Stable repository - CERN mirror - 32bit        218
+repolist: 49,617

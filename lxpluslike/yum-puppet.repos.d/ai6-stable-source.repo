@@ -1,0 +1,6 @@
+[ai6-stable-source]
+gpgcheck=0
+enabled=0
+name=Utilities for the Agile Infrastructure project [stable] (source)
+baseurl=http://linuxsoft.cern.ch/internal/repos/ai6-stable/source/SRPMS
+priority=30

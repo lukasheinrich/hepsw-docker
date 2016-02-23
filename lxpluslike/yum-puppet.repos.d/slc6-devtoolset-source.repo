@@ -1,0 +1,8 @@
+[slc6-devtoolset-source]
+gpgcheck=1
+enabled=0
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-cern
+name=Scientific Linux CERN - Devtoolset addons (Source RPMs)
+baseurl=http://linuxsoft.cern.ch/cern/devtoolset/slc6X/x86_64/yum/devtoolset-source
+priority=10
+includepkgs=

@@ -1,0 +1,6 @@
+[lemon6-testing]
+gpgcheck=0
+enabled=0
+name=lemon [testing]
+baseurl=http://linuxsoft.cern.ch/internal/repos/lemon6-testing/x86_64/os
+priority=99

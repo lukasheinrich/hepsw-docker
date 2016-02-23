@@ -1,0 +1,6 @@
+[castor]
+baseurl=http://linuxsoft.cern.ch/internal/yumsnapshot/20150630/castor/castor6-stable/$basearch/os
+gpgcheck=0
+name=CASTOR Repositories in LINUXSOFT
+priority=1
+enabled=1

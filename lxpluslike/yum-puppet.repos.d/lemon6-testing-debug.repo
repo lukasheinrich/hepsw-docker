@@ -1,0 +1,6 @@
+[lemon6-testing-debug]
+gpgcheck=0
+enabled=0
+name=lemon [testing] (debuginfo)
+baseurl=http://linuxsoft.cern.ch/internal/repos/lemon6-testing/x86_64/debug
+priority=99

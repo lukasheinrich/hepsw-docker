@@ -1,0 +1,72 @@
+Loaded plugins: kernel-module, priorities, refresh-packagekit, rpm-warm-cache,
+              : security, versionlock
+repo id                        repo name                                        
+ai6-qa                         Utilities for the Agile Infrastructure project [Q
+ai6-qa-debug                   Utilities for the Agile Infrastructure project [Q
+ai6-qa-source                  Utilities for the Agile Infrastructure project [Q
+ai6-stable-debug               Utilities for the Agile Infrastructure project [s
+ai6-stable-source              Utilities for the Agile Infrastructure project [s
+ai6-testing                    Utilities for the Agile Infrastructure project [t
+ai6-testing-debug              Utilities for the Agile Infrastructure project [t
+ai6-testing-source             Utilities for the Agile Infrastructure project [t
+batch6-qa                      CERN Batch specific software [QA]                
+batch6-qa-debug                CERN Batch specific software [QA] (debuginfo)    
+batch6-qa-source               CERN Batch specific software [QA] (source)       
+batch6-stable-debug            CERN Batch specific software [stable] (debuginfo)
+batch6-stable-source           CERN Batch specific software [stable] (source)   
+batch6-testing                 CERN Batch specific software [testing]           
+batch6-testing-debug           CERN Batch specific software [testing] (debuginfo
+batch6-testing-source          CERN Batch specific software [testing] (source)  
+cci6-openstack-clients-qa      CERN rebuilds for OpenStack clients - QA         
+cci6-rdo-openstack-testing     Openstack RDO                                    
+cvmfs-config                   CVMFS config yum repository for el6              
+elrepo                         El Repo, the Community Enterprise Linux Repositor
+elrepo-extras                  El Repo, the Community Enterprise Linux Repositor
+elrepo-extras-source           El Repo, the Community Enterprise Linux Repositor
+elrepo-kernel                  El Repo, the Community Enterprise Linux Repositor
+elrepo-kernel-source           El Repo, the Community Enterprise Linux Repositor
+elrepo-source                  El Repo, the Community Enterprise Linux Repositor
+elrepo-testing                 El Repo, the Community Enterprise Linux Repositor
+elrepo-testing-source          El Repo, the Community Enterprise Linux Repositor
+epel-debug                     Extra Packages for Enterprise Linux - Debug [2016
+epel-source                    Extra Packages for Enterprise Linux - Source     
+epel-testing                   Extra Packages for Enterprise Linux - Testing    
+epel-testing-source            Extra Packages for Enterprise Linux - Testing Sou
+lemon6-qa                      lemon [QA]                                       
+lemon6-qa-debug                lemon [QA] (debuginfo)                           
+lemon6-qa-source               lemon [QA] (source)                              
+lemon6-stable-debug            lemon [stable] (debuginfo)                       
+lemon6-stable-source           lemon [stable] (source)                          
+lemon6-testing                 lemon [testing]                                  
+lemon6-testing-debug           lemon [testing] (debuginfo)                      
+lemon6-testing-source          lemon [testing] (source)                         
+sectools6-qa                   Security tools for the Agile Infrastructure proje
+sectools6-qa-debug             Security tools for the Agile Infrastructure proje
+sectools6-qa-source            Security tools for the Agile Infrastructure proje
+sectools6-stable-debug         Security tools for the Agile Infrastructure proje
+sectools6-stable-source        Security tools for the Agile Infrastructure proje
+sectools6-testing              Security tools for the Agile Infrastructure proje
+sectools6-testing-debug        Security tools for the Agile Infrastructure proje
+sectools6-testing-source       Security tools for the Agile Infrastructure proje
+slc6-cernonly-debug            Scientific Linux CERN - CERNOnly (Debug RPMs)    
+slc6-cernonly-source           Scientific Linux CERN - CERNOnly (Source RPMs)   
+slc6-devtoolset-debug          Scientific Linux CERN - Devtoolset addons (Debug 
+slc6-devtoolset-source         Scientific Linux CERN - Devtoolset addons (Source
+slc6-devtoolset-testing        Scientific Linux CERN - Devtoolset addons - testi
+slc6-devtoolset-testing-debug  Scientific Linux CERN - Devtoolset addons - testi
+slc6-devtoolset-testing-source Scientific Linux CERN - Devtoolset addons - testi
+slc6-extras-debug              Scientific Linux CERN - Extras (Debug RPMs)      
+slc6-extras-source             Scientific Linux CERN - Extras (Source RPMs)     
+slc6-os-debug                  Scientific Linux CERN (Debug RPMs)               
+slc6-os-source                 Scientific Linux CERN (Source RPMs)              
+slc6-scl-debug                 Scientific Linux CERN - SCL addons (Debug RPMs)  
+slc6-scl-source                Scientific Linux CERN - SCL addons (Source RPMs) 
+slc6-scl-testing               Scientific Linux CERN - SCL addons - testing     
+slc6-scl-testing-debug         Scientific Linux CERN - SCL addons - testing (Deb
+slc6-scl-testing-source        Scientific Linux CERN - SCL addons - testing (Sou
+slc6-testing                   Scientific Linux CERN - Testing (RPMs)           
+slc6-testing-debug             Scientific Linux CERN - Testing (Debug RPMs)     
+slc6-testing-source            Scientific Linux CERN - Testing (Source RPMs)    
+slc6-updates-debug             Scientific Linux CERN - Updates (Debug RPMs)     
+slc6-updates-source            Scientific Linux CERN - Updates (Source RPMs)    
+repolist: 0

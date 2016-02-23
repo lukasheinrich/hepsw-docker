@@ -1,0 +1,6 @@
+[batch6-testing-debug]
+gpgcheck=0
+enabled=0
+name=CERN Batch specific software [testing] (debuginfo)
+baseurl=http://linuxsoft.cern.ch/internal/repos/batch6-testing/x86_64/debug
+priority=10

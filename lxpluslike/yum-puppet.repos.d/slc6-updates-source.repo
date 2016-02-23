@@ -1,0 +1,9 @@
+[slc6-updates-source]
+gpgcheck=1
+exclude=libxerces-c-3_1,python-logilab-*,lucene-demo
+enabled=0
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-cern
+name=Scientific Linux CERN - Updates (Source RPMs)
+baseurl=http://linuxsoft.cern.ch/cern/slc6X/x86_64/updates/SRPMS
+priority=10
+includepkgs=

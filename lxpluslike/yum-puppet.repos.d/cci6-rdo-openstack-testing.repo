@@ -1,0 +1,7 @@
+[cci6-rdo-openstack-testing]
+baseurl=http://linuxsoft.cern.ch/rdo/rdo-x86_64/RPMS.openstack-rdo-juno-epel-6/
+includepkgs=python-cinderclient,python-glanceclient,python-heatclient,python-keystoneclient,python-neutronclient,python-novaclient,python-openstackclient,pyparsing,python-backports,python-cliff,python-cmd2,python-oslo-config,python-oslo-i18n,python-oslo-serialization,python-oslo-utils,python-six,python-webob
+gpgcheck=0
+name=Openstack RDO
+priority=5
+enabled=1

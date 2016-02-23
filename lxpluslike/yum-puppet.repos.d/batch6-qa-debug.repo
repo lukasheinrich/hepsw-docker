@@ -1,0 +1,6 @@
+[batch6-qa-debug]
+gpgcheck=0
+enabled=0
+name=CERN Batch specific software [QA] (debuginfo)
+baseurl=http://linuxsoft.cern.ch/internal/repos/batch6-qa/x86_64/debug
+priority=10

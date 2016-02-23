@@ -1,0 +1,9 @@
+[slc6-cernonly-debug]
+gpgcheck=1
+exclude=libxerces-c-3_1,python-logilab-*,lucene-demo
+enabled=0
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-cern
+name=Scientific Linux CERN - CERNOnly (Debug RPMs)
+baseurl=http://linuxsoft.cern.ch/onlycern/slc6X/x86_64/debug
+priority=10
+includepkgs=
