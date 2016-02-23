@@ -11,21 +11,23 @@ RUN ./configure --with-momentum=GEV --with-length=MM --prefix /usr/local && \
     make -j4 && \
     make install
 WORKDIR /code
-RUN curl http://home.thep.lu.se/~torbjorn/pythia8/pythia8186.tgz|tar -xzvf -
-WORKDIR pythia8186
-RUN ./configure --with-hepmc=/usr/local --with-hepmcversion=2.06.09 --prefix=/usr/local && \
+RUN curl http://home.thep.lu.se/~torbjorn/pythia8/pythia8215.tgz|tar -xzvf -
+WORKDIR pythia8215
+RUN ./configure --with-hepmc2=/usr/local  --enable-shared --enable-64bit --prefix=/usr/local && \
     make -j4 && \
     make install
+RUN chmod +x /usr/local/bin/pythia8-config
 RUN echo "/usr/local/lib" >> /etc/ld.so.conf.d/local.conf
 RUN ldconfig
 WORKDIR /code
-ENV PYTHIA8DATA /usr/local/xmldoc
-ADD example_main.cc example_main.cc
-RUN  g++ -O2 -ansi -pedantic -W -Wall -Wshadow -m64 -Wno-shadow \
+ENV PYTHIA8DATA /usr/local/share/Pythia8/xmldoc
+# ADD example_main.cc example_main.cc
+RUN cp ./pythia8215/examples/main42.cc example_main.cc
+RUN  g++ -O2 -ansi -pedantic -ldl -W -Wall -Wshadow -m64 -Wno-shadow \
      `pythia8-config --cxxflags` example_main.cc -o example_main \
-     `pythia8-config --libs --hepmc|sed 's|\-lhepmcinterface||'` \
-     -lpythia8tohepmc \
+     `pythia8-config --libs --hepmc|sed 's|\-lhepmcinterface||'`  \
      -L`pythia8-config --libdir`/archive
+
 ADD test.hepmc test.hepmc
 ADD steering_test.dat steering_test.dat
 RUN yum install --assumeyes wget
@@ -40,9 +42,9 @@ RUN yum install -y gcc-gfortran openssl-devel pcre-devel \
 RUN yum install -y git make gcc-c++ gcc binutils \
 	libX11-devel libXpm-devel libXft-devel libXext-devel
 ENV ROOTSYS /usr/local
-RUN git clone --quiet http://root.cern.ch/git/root.git /code/root-v5-34-25 &&\
-    cd  /code/root-v5-34-25 &&\
-    git checkout v5-34-25 &&\
+RUN git clone --quiet http://root.cern.ch/git/root.git /code/root-v6-04-14 &&\
+    cd  /code/root-v6-04-14 &&\
+    git checkout v6-04-14 &&\
     ./configure --all &&\
     make -j4 &&\
     make -j4 install
@@ -50,8 +52,8 @@ RUN git clone --quiet http://root.cern.ch/git/root.git /code/root-v5-34-25 &&\
 RUN git clone https://github.com/delphes/delphes.git
 RUN bash -c 'source /usr/local/bin/thisroot.sh && cd delphes && make -j4'
 ENV MANPATH /usr/local/man
-ENV LD_LIBRARY_PATH=/usr/local/lib
+ENV LD_LIBRARY_PATH=/code/delphes:/usr/local/lib
 ENV LIBPATH /usr/local/lib
 ENV PATH /code/delphes:/usr/local/bin:/usr/local/sbin:/usr/sbin:/usr/bin:/sbin:/bin
-ENV PYTHONPATH /usr/local/lib
+ENV PYTHONPATH /code/delphes/python:/usr/local/lib
 ENV SHLIB_PATH /usr/local/lib
