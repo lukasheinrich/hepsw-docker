@@ -3,8 +3,9 @@ RUN yum --assumeyes install gcc gcc-gfortran bzr graphviz-devel make perl tar
 RUN yum --assumeyes groupinstall "Development Tools"
 RUN mkdir /code
 WORKDIR /code
-RUN bzr branch lp:~maddevelopers/mg5amcnlo/1.5.10 madgraph-1.5.10
-RUN ln -s $PWD/madgraph-1.5.10/bin/mg5 /usr/local/bin
+RUN bzr branch lp:~maddevelopers/mg5amcnlo/2.3.3 madgraph-2.3.3
+RUN ln -s $PWD/madgraph-2.3.3/bin/mg5_aMC /usr/local/bin && \
+    ln -s $PWD/madgraph-2.3.3/bin/mg5 /usr/local/bin 
 RUN curl http://lcgapp.cern.ch/project/simu/HepMC/download/HepMC-2.06.09.tar.gz | tar -xzvf -
 WORKDIR HepMC-2.06.09
 RUN ./configure --with-momentum=GEV --with-length=MM --prefix /usr/local && \
@@ -31,7 +32,7 @@ RUN  g++ -O2 -ansi -pedantic -ldl -W -Wall -Wshadow -m64 -Wno-shadow \
 ADD test.hepmc test.hepmc
 ADD steering_test.dat steering_test.dat
 RUN yum install --assumeyes wget
-RUN echo "install pythia-pgs" > install_madgraph_cmd && mg5 -f install_madgraph_cmd
+RUN echo "install pythia-pgs" > install_madgraph_cmd && mg5_aMC -f install_madgraph_cmd
 
 
 RUN yum install -y gcc-gfortran openssl-devel pcre-devel \
