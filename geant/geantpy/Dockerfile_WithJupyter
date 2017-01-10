@@ -1,0 +1,8 @@
+FROM lukasheinrich/geantpy
+# Add Tini. Tini operates as a process subreaper for jupyter. This prevents kernel crashes.
+ENV TINI_VERSION v0.13.0
+ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /usr/bin/tini
+RUN chmod +x /usr/bin/tini
+ENTRYPOINT ["/usr/bin/tini", "--"]
+EXPOSE 8888
+CMD sh -c 'source /usr/local/bin/thisroot.sh && source /usr/local/bin/geant4.sh && jupyter notebook --port=8888 --no-browser --ip=0.0.0.0'
